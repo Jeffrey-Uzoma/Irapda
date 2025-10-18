@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log('🌱 Seeding database...');
+  console.log(' Seeding database...');
 
   // Create Admin User
   const hashedAdminPassword = await bcrypt.hash('admin123', 10);
@@ -20,7 +20,7 @@ async function main() {
     }
   });
 
-  console.log('✅ Admin user created:', admin.email);
+  console.log('Admin user created:', admin.email);
 
   // Create Test User
   const hashedUserPassword = await bcrypt.hash('user123', 10);
@@ -36,7 +36,7 @@ async function main() {
     }
   });
 
-  console.log('✅ Test user created:', user.email);
+  console.log('Test user created:', user.email);
 
   // Create Sample Products
   const products = [
@@ -130,10 +130,10 @@ async function main() {
     const product = await prisma.product.create({
       data: productData
     });
-    console.log(`✅ Product created: ${product.name}`);
+    console.log(` Product created: ${product.name}`);
   }
 
-  console.log('🎉 Seeding completed successfully!');
+  console.log('Seeding completed successfully!');
 }
 
 main()
