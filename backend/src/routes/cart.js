@@ -5,7 +5,7 @@ const authenticateToken = require('../middleware/auth');
 const router = express.Router();
 const prisma = new PrismaClient();
 
-// Get user's cart
+//Get user's cart
 router.get('/', authenticateToken, async (req, res) => {
   try {
     const userId = req.user.userId;
