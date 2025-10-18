@@ -1,4 +1,4 @@
-**BACKEND SETUP INSTRUCTIONS**
+## BACKEND SETUP INSTRUCTIONS
 
 
 **1. Initialize Backend:**  
@@ -71,7 +71,7 @@
 
 
 
-**FRONTEND SETUP INSTRUCTIONS**
+## FRONTEND SETUP INSTRUCTIONS
 
 **1. Create React + Vite App**  
   Run the following commands to create and set up the frontend project:
@@ -96,23 +96,23 @@
   
     @import "tailwindcss";
 
-4. Create .env file
+**4. Create .env file**
 
 ```env
 VITE_API_URL=http://localhost:5000/api
 ```
 
-## Running the Application
+## RUNNING THE APPLICATION
 
-### Backend
+**Backend**  
 ```bash
 cd backend
 npm run dev
 ```
+Server runs on: http://localhost:5000  
 
-Server runs on: http://localhost:5000
 
-### Frontend
+**Frontend**  
 ```bash
 cd frontend
 npm run dev
@@ -120,18 +120,19 @@ npm run dev
 
 App runs on: http://localhost:5173
 
-## API Endpoints
-
-### Authentication
+## API ENDPOINTS  
+**Authentication**
 - POST `/api/auth/register` - Register new user
 - POST `/api/auth/login` - Login user
 
-### Products
+
+**Products**  
 - GET `/api/products` - Get all products (public)
 - GET `/api/products/:id` - Get single product (public)
 - POST `/api/products` - Create product (admin only)
 - PUT `/api/products/:id` - Update product (admin only)
 - DELETE `/api/products/:id` - Delete product (admin only)
+
 
 ### Cart
 - GET `/api/cart` - Get user's cart
@@ -139,14 +140,17 @@ App runs on: http://localhost:5173
 - PUT `/api/cart/:id` - Update cart item quantity
 - DELETE `/api/cart/:id` - Remove item from cart
 
+
 ### Orders
 - GET `/api/orders` - Get user's orders
 - POST `/api/orders` - Place order from cart
+
 
 ### Wishlist
 - GET `/api/wishlist` - Get user's wishlist
 - POST `/api/wishlist/:productId` - Add to wishlist
 - DELETE `/api/wishlist/:productId` - Remove from wishlist
+
 
 ## Testing Credentials
 
