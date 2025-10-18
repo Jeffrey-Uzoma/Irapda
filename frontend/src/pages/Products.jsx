@@ -8,8 +8,6 @@ function Products() {
   const { user } = useAuth();
   const queryClient = useQueryClient();
   const [notification, setNotification] = useState('');
-
-  // ✅ Updated: useQuery now uses object syntax
   const { data: products, isLoading } = useQuery({
     queryKey: ['products'],
     queryFn: async () => {
@@ -27,7 +25,7 @@ function Products() {
     enabled: !!user,
   });
 
-  // ✅ Updated: useMutation now uses object syntax
+  //Updated: useMutation now uses object syntax
   const addToCartMutation = useMutation({
     mutationFn: (data) => cartAPI.add(data),
     onSuccess: () => {
