@@ -15,7 +15,7 @@ function AdminProducts() {
     imageUrl: '',
   });
 
-  //  Fixed useQuery for React Query v5
+  // Fixed useQuery for React Query v5
   const {
     data: products,
     isLoading,
