@@ -15,7 +15,7 @@ function AdminProducts() {
     imageUrl: '',
   });
 
-  // ✅ Fixed useQuery for React Query v5
+  //  Fixed useQuery for React Query v5
   const {
     data: products,
     isLoading,
@@ -27,7 +27,7 @@ function AdminProducts() {
     },
   });
 
-  // ✅ Fixed useMutation syntax for v5
+  //  Fixed useMutation syntax for v5
   const createProductMutation = useMutation({
     mutationFn: (data) => productsAPI.create(data),
     onSuccess: () => {
