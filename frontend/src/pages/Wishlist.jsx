@@ -11,7 +11,7 @@ function Wishlist() {
   const queryClient = useQueryClient();
   const [notification, setNotification] = useState(null);
 
-  // ✅ Updated useQuery for TanStack v5
+  // Updated useQuery for TanStack v5
   const {
     data: wishlistItems,
     isLoading,
@@ -24,7 +24,7 @@ function Wishlist() {
     },
   });
 
-  // ✅ Remove from wishlist mutation
+  // Remove from wishlist mutation
   const removeFromWishlistMutation = useMutation({
     mutationFn: async (productId) => wishlistAPI.remove(productId),
     onSuccess: () => {
@@ -39,7 +39,7 @@ function Wishlist() {
     },
   });
 
-  // ✅ Add to cart mutation
+  // Add to cart mutation
   const addToCartMutation = useMutation({
     mutationFn: async (data) => cartAPI.add(data),
     onSuccess: () => {
@@ -54,7 +54,7 @@ function Wishlist() {
     },
   });
 
-  // ✅ Notification handler
+  // Notification handler
   const showNotification = (message, isError = false) => {
     setNotification({ message, isError });
     setTimeout(() => setNotification(null), 3000);
