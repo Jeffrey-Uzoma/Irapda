@@ -3,9 +3,9 @@ BACKEND SETUP INSTRUCTIONS
 
 After creating the main project folder (Irapda LTD), run:
 
-mkdir backend
-cd backend
-npm init -y
+mkdir backend  
+cd backend  
+npm init -y  
 
 2. Install Dependencies
 
