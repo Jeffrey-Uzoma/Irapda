@@ -4,8 +4,6 @@ import { ordersAPI } from '../api/api';
 
 function Orders() {
   const [expandedOrder, setExpandedOrder] = useState(null);
-
-  // ✅ Updated to v5 object-style query
   const {
     data: orders,
     isLoading,
