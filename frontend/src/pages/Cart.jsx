@@ -12,7 +12,7 @@ function Cart() {
   const queryClient = useQueryClient();
   const [notification, setNotification] = useState(null);
 
-  // ✅ Updated syntax for useQuery (v5)
+  // Updated syntax for useQuery (v5)
   const {
     data: cartData,
     isLoading,
@@ -25,7 +25,7 @@ function Cart() {
     },
   });
 
-  // ✅ Update cart mutation
+  // Update cart mutation
   const updateCartMutation = useMutation({
     mutationFn: async ({ id, quantity }) =>
       cartAPI.update(id, { quantity }),
@@ -41,7 +41,7 @@ function Cart() {
     },
   });
 
-  // ✅ Remove from cart mutation
+  // Remove from cart mutation
   const removeFromCartMutation = useMutation({
     mutationFn: async (id) => cartAPI.remove(id),
     onSuccess: () => {
@@ -56,7 +56,7 @@ function Cart() {
     },
   });
 
-  // ✅ Place order mutation
+  // Place order mutation
   const placeOrderMutation = useMutation({
     mutationFn: async () => ordersAPI.create(),
     onSuccess: () => {
@@ -73,7 +73,7 @@ function Cart() {
     },
   });
 
-  // ✅ Notification helper
+  // Notification helper
   const showNotification = (message, isError = false) => {
     setNotification({ message, isError });
     setTimeout(() => setNotification(null), 3000);
