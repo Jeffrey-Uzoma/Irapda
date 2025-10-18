@@ -44,7 +44,7 @@ function Register() {
       localStorage.setItem('token', data.token);
       localStorage.setItem('user', JSON.stringify(data.user));
 
-      // ✅ Log the user in globally
+      // Log the user in globally
       login(data.token, data.user);
 
       setTimeout(() => {
@@ -109,7 +109,7 @@ function Register() {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none pr-10"
               required
             />
-            {/* 👁️ Eye icon */}
+            {/* Eye icon */}
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
