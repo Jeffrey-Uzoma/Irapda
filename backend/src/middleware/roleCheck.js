@@ -1,8 +1,5 @@
-// src/middleware/roleCheck.js
-
 const isAdmin = (req, res, next) => {
   try {
-    // Make sure user exists and has role field
     if (!req.user) {
       return res.status(401).json({ error: 'Unauthorized' });
     }
