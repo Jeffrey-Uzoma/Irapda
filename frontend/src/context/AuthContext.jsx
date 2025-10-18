@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // ✅ Load user from localStorage on mount
+  //  Load user from localStorage on mount
   useEffect(() => {
     const storedToken = localStorage.getItem('token');
     const storedUser = localStorage.getItem('user');
@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
     setLoading(false);
   }, []);
 
-  // ✅ Keep user logged in across tabs (sync storage events)
+  //  Keep user logged in across tabs (sync storage events)
   useEffect(() => {
     const syncLogout = (event) => {
       if (event.key === 'token' && !event.newValue) {
@@ -39,7 +39,7 @@ export const AuthProvider = ({ children }) => {
     return () => window.removeEventListener('storage', syncLogout);
   }, []);
 
-  // ✅ Login helper (used for both login & register)
+  //  Login helper (used for both login & register)
   const login = (token, userData) => {
     localStorage.setItem('token', token);
     localStorage.setItem('user', JSON.stringify(userData));
@@ -47,7 +47,7 @@ export const AuthProvider = ({ children }) => {
     setUser(userData);
   };
 
-  // ✅ Logout helper
+  //  Logout helper
   const logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
@@ -55,7 +55,7 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
   };
 
-  // ✅ Auth context value
+  //  Auth context value
   const value = {
     user,
     token,
