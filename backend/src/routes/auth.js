@@ -9,7 +9,7 @@ const prisma = new PrismaClient();
 // Register
 router.post('/register', async (req, res) => {
   try {
-    console.log('Incoming body:', req.body); // 👈 Add this
+    console.log('Incoming body:', req.body);
     const { email, password, name } = req.body;
 
     // Validation
