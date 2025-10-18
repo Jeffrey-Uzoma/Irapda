@@ -14,7 +14,7 @@ function Navbar() {
   const { data: cartData } = useQuery({
     queryKey: ['cart'],
     queryFn: () => cartAPI.get(),
-    enabled: !!user && user.role !== 'ADMIN', // ✅ disable for admin
+    enabled: !!user && user.role !== 'ADMIN', //  disable for admin
     select: (response) => response.data,
   });
 
@@ -60,7 +60,7 @@ function Navbar() {
                   </Link>
                 )}
 
-                {/* ✅ Cart icon with count */}
+                {/*  Cart icon with count */}
                 {!user?.isAdmin && (
                   <Link to="/cart" className="relative text-gray-700 hover:text-blue-600">
                     <FaCartArrowDown size={22} />
@@ -72,7 +72,7 @@ function Navbar() {
                   </Link>
                 )}
 
-                {/* ✅ Admin link */}
+                {/*  Admin link */}
                 {user.role === 'ADMIN' && (
                   <Link
                     to="/admin/products"
@@ -82,7 +82,7 @@ function Navbar() {
                   </Link>
                 )}
 
-                {/* ✅ User Info + Logout */}
+                {/*  User Info + Logout */}
                 <div className="flex items-center space-x-4">
                   <span className="text-green-700 font-medium">{user.name}</span>
                   <button
